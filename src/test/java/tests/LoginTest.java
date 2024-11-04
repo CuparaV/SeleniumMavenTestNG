@@ -49,7 +49,7 @@ Expected Result: An error message is displayed, such as "Your password is invali
     */
 
     @Test
-    public void LoginWithIncorrectPassword() {
+    public void loginWithIncorrectPassword() {
         loginPage.openLoginPage("https://the-internet.herokuapp.com/login");
         loginPage.enterTextInFieldUsernameAsParameter(Constants.USERNAME);
         loginPage.enterTextInFieldPassword("loremTest");  // pogresan password unet
@@ -70,10 +70,10 @@ Expected Result: An error message   "Your username is invalid!" is displayed.
      */
 
 //    NAPOMENA: Bilo bi bolje da postoji i validacija za opciju kada se ne ostave prazna polja, odnosno da se
-//    koricuje tekst kao na primer "Polja username i password su obavezna", ili za svako pojedinacno
+//    koriguje tekst kao na primer "Polja username i password su obavezna", ili za svako pojedinacno
 
     @Test
-    public void LoginWithEmptyFields() {
+    public void loginWithEmptyFields() {
         loginPage.openLoginPage("https://the-internet.herokuapp.com/login");
         loginPage.clickOnButton();
         loginPage.assertTextInErrorMessage("Your username is invalid!");
@@ -93,7 +93,7 @@ Expected Result: An error message is displayed indicating that the inputted data
      */
 
     @Test
-    public void LoginWithSpecialCharacters() {
+    public void loginWithSpecialCharacters() {
         loginPage.openLoginPage("https://the-internet.herokuapp.com/login");
         loginPage.enterTextInFieldUsernameAsParameter("@!#$%");
         loginPage.enterTextInFieldPassword(")*&^%");

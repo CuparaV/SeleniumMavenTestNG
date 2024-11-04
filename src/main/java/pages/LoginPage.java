@@ -8,8 +8,8 @@ import utils.Constants;
 
 public class LoginPage {
 
-    WebDriver driver;
-    private LoginPage loginPage;
+    private WebDriver driver;
+
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
@@ -29,9 +29,9 @@ public class LoginPage {
         usernameFieldName.sendKeys(username);
     }
 
-    public void enterTextInFieldPassword(String username) {
+    public void enterTextInFieldPassword(String password) {
         WebElement usernameFieldName = driver.findElement(By.id("password"));
-        usernameFieldName.sendKeys(username);
+        usernameFieldName.sendKeys(password);
     }
 
     public void clickOnButton() {
@@ -66,6 +66,10 @@ public class LoginPage {
         System.out.println(actualColor);
         Assert.assertEquals(expectedColor,actualColor,"The expected color is: " + expectedColor + "and actual color " +
                 "is: " +  actualColor);
+
+
     }
+
+
 
 }
